@@ -1,0 +1,119 @@
+/* 
+  Main application styles - most styling is handled by Tailwind CSS directly in components
+  This file contains only basic layout and responsive adjustments
+*/
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Base layout */
+.app {
+  @apply min-h-screen flex flex-col bg-gray-50;
+}
+
+.app-header {
+  @apply bg-blue-700 text-white py-4 px-6 shadow-md;
+}
+
+.app-header h1 {
+  @apply text-2xl font-bold;
+}
+
+.app-header p {
+  @apply text-blue-100 mt-1;
+}
+
+.app-content {
+  @apply flex-grow container mx-auto px-4 py-6 md:px-6;
+}
+
+.app-footer {
+  @apply bg-gray-800 text-white text-center py-4 text-sm;
+}
+
+/* Tab navigation */
+.tabs {
+  @apply flex mb-6 border-b border-gray-300;
+}
+
+.tabs button {
+  @apply px-4 py-2 text-gray-600 hover:text-gray-800 focus:outline-none;
+}
+
+.tabs button.active {
+  @apply text-blue-600 border-b-2 border-blue-600 font-medium;
+}
+
+/* Run algorithm view */
+.run-algorithm-container {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6;
+}
+
+.controls-panel {
+  @apply lg:col-span-1 bg-white p-4 rounded-lg shadow;
+}
+
+.results-panel {
+  @apply lg:col-span-2 bg-white p-4 rounded-lg shadow;
+}
+
+.run-button {
+  @apply w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-medium
+          focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+          disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.error-message {
+  @apply mt-4 p-3 bg-red-100 text-red-700 rounded text-sm;
+}
+
+.no-results {
+  @apply flex items-center justify-center h-64 text-gray-500 text-center p-6 border-2 border-dashed border-gray-300 rounded;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-header h1 {
+    @apply text-xl;
+  }
+  
+  .tabs {
+    @apply overflow-x-auto whitespace-nowrap;
+  }
+  
+  .tabs button {
+    @apply text-sm px-3;
+  }
+}
+
+/* Custom slider styles */
+input[type='range'] {
+  -webkit-appearance: none;
+  @apply h-2 bg-blue-100 rounded-lg;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  @apply w-4 h-4 bg-blue-600 rounded-full cursor-pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+  @apply w-4 h-4 bg-blue-600 border-none rounded-full cursor-pointer;
+}
+
+/* Charts and visualizations */
+.privacy-impact-container,
+.distribution-impact-container {
+  @apply bg-white p-6 rounded-lg shadow;
+}
+
+.privacy-impact-container h2,
+.distribution-impact-container h2 {
+  @apply text-xl font-semibold mb-2;
+}
+
+.privacy-impact-container p,
+.distribution-impact-container p {
+  @apply text-gray-600 mb-4;
+}
