@@ -1,0 +1,21 @@
+Test,RR,OLH
+Basic Algorithm Validation,1.0,1.0
+Privacy Test (ε=0.5),1.0,1.0
+Privacy Test (ε=1.0),1.0,0.9090909090909091
+Privacy Test (ε=2.0),1.0,0.8181818181818182
+Privacy Test (ε=4.0),1.0,1.0
+Distribution Test (zipf),1.0,1.0
+Distribution Test (uniform),1.0,1.0
+Distribution Test (normal),1.0,1.0
+Sample Size Test (n=5000),1.0,1.0
+Sample Size Test (n=10000),1.0,0.9090909090909091
+Sample Size Test (n=50000),1.0,1.0
+Sample Size Test (n=200000),1.0,1.0
+Domain Size Test (d=100),1.0,1.0
+Domain Size Test (d=1000),1.0,1.0
+Domain Size Test (d=10000),1.0,0.8181818181818182
+Threshold Test (t=0.005),1.0,0.7222222222222222
+Threshold Test (t=0.01),1.0,1.0
+Threshold Test (t=0.02),1.0,1.0
+Threshold Test (t=0.05),1.0,1.0
+Highly Skewed Distribution,1.0,1.0
